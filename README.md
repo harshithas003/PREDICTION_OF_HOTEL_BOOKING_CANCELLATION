@@ -3,60 +3,56 @@
 ## Project Overview
 This project focuses on predicting hotel booking cancellations using supervised machine learning (Classification).
 
-### Problem Statement
-Unexpected hotel cancellations have led to a significant revenue loss for the hotel. The objective is to predict which customers are likely to cancel their bookings, allowing the hotel to implement proactive strategies such as incentives and special reminders to reduce cancellations and ultimately increase revenue.
+## Introduction
+Hotel booking cancellation is a common issue that can lead to significant revenue loss for hotels. This project aims to build a predictive model to identify bookings that are likely to be canceled, enabling hotels to take proactive measures.
 
-### Objective
-The primary objective is to develop a model that accurately predicts hotel booking cancellations. This prediction will provide valuable insights for the company, enabling them to allocate resources effectively and reduce the number of cancellations, thereby increasing revenue.
+## Dataset
+The dataset used in this project contains various features related to hotel bookings. It includes information such as booking dates, customer demographics, and booking details. The dataset is preprocessed to handle missing values, encode categorical variables, and scale numerical features.
 
-## Project Steps and Processes
+## Installation
+To run the notebook, you need to have Python installed along with the necessary libraries. You can install the required libraries using the following command:
 
-### Data Understanding & Data Preprocessing
-- **Dataset Information**: 
-  - Contains 83,293 rows and 33 columns.
-- **Data Cleaning**:
-  - Handling missing values and duplicates.
-  - Converting incorrect data types.
+```bash
+pip install -r requirements.txt
+```
 
-### Exploratory Data Analysis
-- **Outlier Handling**.
-- **Exploratory Analysis**:
-  - Analyzing both categorical and numerical data.
+## Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/harshithas003/PREDICTION_OF_HOTEL_BOOKING_CANCELLATION.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd PREDICTION_OF_HOTEL_BOOKING_CANCELLATION
+   ```
+3. Open the Jupyter notebook:
+   ```bash
+   jupyter notebook hotel-booking-cancellation-prediction.ipynb
+   ```
 
-### Modelling
-Six classification models were used, and performance evaluations were conducted to determine the best model:
-  - Logistic Regression
-  - K-Nearest Neighbors (KNN)
-  - Decision Tree
-  - Random Forest
-  - LGBM (Light Gradient Boosting Machine)
-  - XGBoost
+## Model Evaluation
+The notebook includes the following models for prediction:
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+- XGBoost
 
-### Evaluation
-- **Best Model for Prediction**: 
-  - **Random Forest Classifier**:
-    - **F1 Score**: 0.7979
-    - **Recall Score**: 0.8218
-  - **Best Parameters for Random Forest**: 
-    - `max_depth`: 50
-    - `min_samples_split`: 2
-    - `n_estimators`: 300
-  - **False Negative Rate (FNR)**: 0.1781
+Each model is evaluated using various metrics such as accuracy, precision, recall, F1-score, and AUC.
 
-### Business Recommendations
-- **Manage Peak Season Reservations**:
-  - Focus on prospective customers likely to cancel.
-- **Implement a Deposit System**:
-  - Require upfront payments for early bookings to minimize cancellations.
-- **Stricter Cancellation Policies**:
-  - Differentiate policies between regular and high seasons, including down payments and partial refunds during regular seasons and no charge during high seasons due to high demand.
-- **Adjust Room Category Pricing**:
-  - Reduce the price gap between lower and higher room categories to encourage upgrades.
-- **Create a Membership System**:
-  - Implement a points-based membership system to encourage repeat bookings.
-- **Provide Reminders**:
-  - Send reminders to customers as their arrival date approaches.
-- **Collect Customer Feedback**:
-  - Conduct surveys for guests to gather feedback and improve services, promoting repeat bookings.
+## Results
+The XGBoost model achieved the best performance in predicting hotel booking cancellations:
 
-These steps and recommendations aim to mitigate booking cancellations and enhance revenue by improving the overall customer experience and operational efficiency.
+- **Accuracy**: 85.04%
+- **F1-score (Class 1)**: 79.85%
+- **Precision (Class 1)**: 79.76%
+- **Recall (Class 1)**: 79.94%
+- **AUC (Class 1)**: 92.17%
+
+## Contributing
+Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgements
+Special thanks to the contributors of the dataset and the open-source community for their invaluable resources and tools.
